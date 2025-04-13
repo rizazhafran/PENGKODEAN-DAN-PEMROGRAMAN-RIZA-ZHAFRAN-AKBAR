@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Astra Intenasional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Logo Aplikasi" class="logo">
+        <h1>Aplikasi Persediaan & Penjurnalan</h1>
+    </header>
+
+    <main>
+        <!-- Form untuk menambah barang -->
+        <section class="inventory-section">
+            <h2>Tambah Barang</h2>
+            <input type="text" id="itemName" placeholder="Nama Barang">
+            <input type="number" id="itemQuantity" placeholder="Jumlah">
+            <input type="number" id="itemPrice" placeholder="Harga (Rp)">
+            
+            <select id="accountType">
+                <option value="Persediaan">Persediaan</option>
+                <option value="Kas">Kas</option>
+                <option value="Modal">Modal</option>
+            </select>
+
+            <input type="file" id="itemImage" accept="image/*">
+            <button onclick="addItem()">Tambah</button>
+        </section>
+
+        <!-- Tabel untuk daftar barang -->
+        <section class="inventory-list">
+            <h2>Daftar Barang</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Gambar</th>
+                        <th>Nama Barang</th>
+                        <th>Jumlah</th>
+                        <th>Harga</th>
+                        <th>Akun</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="inventoryTable">
+                    <!-- Data barang akan ditampilkan di sini -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Log jurnal transaksi -->
+        <section class="journal-section">
+            <h2>Jurnal Transaksi</h2>
+            <ul id="journalList">
+                <!-- Data jurnal akan ditampilkan di sini -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
